@@ -1,64 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3968"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Album" custom_title="0" dock_id="1" table="4,5:mainAlbum"/><dock_state state="000000ff00000000fd0000000100000002000002090000037efc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000002090000012b00ffffff000002090000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT
- InvoiceDate,
- BillingAddress,
- BillingCity,
- total,
- CASE
- WHEN total &lt; 2.00 THEN 'Baseline Purchase'
- WHEN total BETWEEN 2.00 AND 6.99 THEN 'Low Purchase'
- WHEN total BETWEEN 7.00 AND 15.00 THEN 'Target Purchase'
- ELSE 'Top Performer'
- END AS PurchaseType
-FROM
- Invoice
-WHERE
- PurchaseType = 'Top Performer'
-ORDER BY
- InvoiceDate</sql><sql name="SQL 7">SELECT
- *
-FROM
- Invoice
-INNER JOIN
- Customer
-ON
- Invoice.CustomerId = Customer.CustomerId
-ORDER BY
- Customer.CustomerId</sql><sql name="SQL 7">SELECT
- c.LastName,
- c.FirstName,
- i.InvoiceId,
- i.CustomerId,
- i.InvoiceDate,
- i.total
-FROM
- Invoice AS i
-INNER JOIN
- Customer AS c
-ON
- i.CustomerId = c.CustomerId
-ORDER BY
- c.CustomerId</sql><sql name="SQL 8">-- Description: JOINS on more than two tables | What employees are responsible for the 10 highest individual sales?
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3968"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Album" custom_title="0" dock_id="1" table="4,5:mainAlbum"/><dock_state state="000000ff00000000fd00000001000000020000010e0000037efc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000010e0000017900ffffff0000010e0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5*">-- Description: FUNCTIONS
 
 SELECT
-	e.FirstName,
-	e.LastName,
-	e.EmployeeId,
-	c.FirstName,
-	c.LastName,
-	c.SupportRepId,
-	i.CustomerId,
-	i.total
+ FirstName,
+ LastName,
+ Address,
+ FirstName || '' || LastName ||''|| Address || ','|| City ||''|| State ||''|| PostalCode AS [Mailing Address],
+ LENGTH(postalcode),
+ substr(postalcode, 1,5) AS [5 Digit Postal Code],
+ upper(firstname) AS [First Name ALL caps],
+ lower(lastname) AS [Last Name ALL Lower]
 FROM
-	Invoice AS i
-INNER JOIN
-	Customer AS c
-ON
-	i.CustomerId = c.CustomerId
-INNER JOIN
-	Employee AS e
-ON
-	c.SupportRepId = e.EmployeeId
-ORDER BY
-	i.total DESC
-LIMIT 10
-</sql><sql name="SQL 5">-- Description: FUNCTIONS</sql><current_tab id="4"/></tab_sql></sqlb_project>
+ Customer
+WHERE
+ Country = 'USA'
+</sql><sql name="SQL 6*">-- Description: Calculate the ages of all employees
+
+SELECT
+ LastName,
+ FirstName,
+ BirthDate,
+ strftime('%Y-%m-%d',BirthDate) AS [BirthDate NO Timecode],
+ strftime('%Y-%m-%d','now') - strftime('%Y-%m-%d',BirthDate) AS Age
+FROM
+ Employee</sql><current_tab id="1"/></tab_sql></sqlb_project>

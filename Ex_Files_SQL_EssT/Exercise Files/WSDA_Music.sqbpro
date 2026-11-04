@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3968"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Album" custom_title="0" dock_id="1" table="4,5:mainAlbum"/><dock_state state="000000ff00000000fd00000001000000020000010e0000037efc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000010e0000017900ffffff0000010e0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4305"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="0" parent="2"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="V_AvgTotal" custom_title="0" dock_id="1" table="4,10:mainV_AvgTotal"/><dock_state state="000000ff00000000fd00000001000000020000020b000004ddfc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000020b0000012600ffffff0000020b0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="V_AvgTotal" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="106"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT
  InvoiceDate,
  BillingAddress,
  BillingCity,
@@ -71,128 +71,29 @@ SELECT
  MIN(total) AS [Minimum Sale],
  COUNT(*) AS [Sales Count]
 FROM
- Invoice</sql><sql name="SQL 6">-- Description: Grouping in SQL | What are the average invoice total by city?
+ Invoice</sql><sql name="SQL 6">-- Description: Subqueries and DISTINCT | Which tracks are not selling?
 
 SELECT
- BillingCity,
- ROUND(AVG(total), 2)
-FROM
- Invoice
-GROUP BY
- BillingCity
-ORDER BY
- BillingCity ASC</sql><sql name="SQL 7">-- Description: Grouping in SQL | What are the average invoice totals by city for only the citites that start with L?
-
-SELECT
- BillingCity,
- ROUND(AVG(total), 2)
-FROM
- Invoice
+	TrackId,
+	Composer,
+	Name
+FROM 
+	Track
 WHERE
- BillingCity LIKE 'L%'
-GROUP BY
- BillingCity
-ORDER BY
- BillingCity ASC</sql><sql name="SQL 8">-- Description: Grouping in SQL | What are the average invoice totals greater than $5.00
-
-SELECT
- BillingCity,
- ROUND(AVG(total), 2)
-FROM
- Invoice
-GROUP BY
- BillingCity
-HAVING
- avg(total) &gt; 5.00
-ORDER BY
- BillingCity ASC</sql><sql name="SQL 9*">-- Description: Grouping in SQL | What are the average invoice totals greater than $5.00 for cities starting with B?
-
-SELECT
- BillingCity,
- ROUND(AVG(total), 2)
-FROM
- Invoice
-WHERE
- BillingCity LIKE 'B%'
-GROUP BY
- BillingCity
-HAVING
- avg(total) &gt; 5.00
-ORDER BY
- BillingCity</sql><sql name="SQL 10">-- Description: Grouping in SQL | What are the average invoice totals by billing country and city?
-
-SELECT
- BillingCity,
- BillingCountry,
- ROUND(AVG(total), 2)
-FROM
- Invoice
-GROUP BY
- BillingCity, BillingCountry
-ORDER BY
- BillingCountry</sql><sql name="SQL 11*">-- Description: Subqueries | Gather data about all invoices that are less than this average?
-
-SELECT
- InvoiceDate,
- BillingAddress,
- BillingCity,
- total
-FROM
- Invoice
-WHERE
- total &lt;
- (SELECT avg(total) FROM Invoice)
-ORDER BY
- total DESC</sql><sql name="SQL 12*">-- Description: Subqueries
-
-
-SELECT
- BillingCity,
- AVG(total) AS [City Average],
- (SELECT AVG(total) FROM Invoice) AS [Global Average]
-FROM
- Invoice
-GROUP BY
- BillingCity
-ORDER BY
- BillingCity</sql><sql name="SQL 13*">-- Description: Subqueries without Agregate functions
-
-
-SELECT
- InvoiceDate,
- BillingAddress,
- BillingCity
-FROM
- Invoice
-WHERE
- InvoiceDate &gt;
+	TrackId
+NOT IN
 (SELECT
- InvoiceDate
-FROM
- Invoice
-WHERE
- InvoiceId = 251)</sql><sql name="SQL 14*">-- Description: Returning multiple values from a subquery
-
-
-
-SELECT
-	InvoiceDate,
-	BillingAddress,
-	BillingCity
-FROM
-	Invoice
-WHERE
-	InvoiceDate IN 
-(SELECT
- InvoiceDate
-FROM
- Invoice
-WHERE
- InvoiceId IN (251, 252, 254))</sql><sql name="SQL 15*">-- Description: Subqueries and DISTINCT | Which tracks are not selling?
-
-SELECT
+	DISTINCT
 	TrackId
 FROM
 	InvoiceLine
-ORDER BY
-	TrackId</sql><current_tab id="14"/></tab_sql></sqlb_project>
+ORDER BY 
+	TrackId)
+</sql><sql name="SQL 7">-- Description: Views
+
+
+CREATE VIEW V_AvgTotal AS 
+SELECT
+	round(avg(total), 2) AS [Average Total]
+FROM
+	Invoice</sql><current_tab id="6"/></tab_sql></sqlb_project>

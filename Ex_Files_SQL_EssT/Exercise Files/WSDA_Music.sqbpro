@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4305"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Album" custom_title="0" dock_id="1" table="4,5:mainAlbum"/><dock_state state="000000ff00000000fd0000000100000002000002d8000004ddfc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000002d80000012600ffffff000002d80000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="V_AvgTotal" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="106"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="WSDA_Music.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4305"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="0"/><expanded_item id="10" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Track" custom_title="0" dock_id="1" table="4,5:mainTrack"/><dock_state state="000000ff00000000fd00000001000000020000021e000004ddfc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000021e0000015100ffffff0000021e0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Album" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="64"/><column index="2" value="281"/><column index="3" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Artist" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="59"/><column index="2" value="179"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Track" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="59"/><column index="2" value="195"/><column index="3" value="67"/><column index="5" value="63"/><column index="6" value="241"/><column index="7" value="98"/><column index="8" value="85"/><column index="9" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT
  InvoiceDate,
  BillingAddress,
  BillingCity,
@@ -127,4 +127,53 @@ ON
 	il.TrackId = t.TrackId</sql><sql name="SQL 11">-- Description: Deleting a Views
 
 DROP VIEW
-	V_AvgTotal</sql><current_tab id="10"/></tab_sql></sqlb_project>
+	V_AvgTotal</sql><sql name="SQL 12">-- Description: DML | Inserting Data
+
+INSERT INTO
+	Artist(Name)
+VALUES ('Bob Marley')</sql><sql name="SQL 13">-- Description: DML | Updating DATABASE
+
+
+UPDATE
+	Artist
+SET
+	Name = 'Damian Marley'
+WHERE
+	ArtistId = 276
+
+SELECT ArtistId	
+FROM Artist as a
+WHERE a.Name = 'Bob Marley'
+</sql><sql name="SQL 14">-- Description: DML | Deleting Data
+
+DELETE FROM
+	Artist
+WHERE
+	ArtistId = 276</sql><sql name="SQL 15">
+SELECT
+*
+FROM Employee AS e</sql><sql name="SQL 16">
+SELECT 
+	i.BillingCity
+FROM
+	Invoice AS i
+WHERE
+	i.BillingCity = 'Brussels'
+	
+	</sql><sql name="SQL 17">
+SELECT
+	TrackId
+FROM 
+	Track
+WHERE 
+	TrackId NOT IN (
+	SELECT DISTINCT Composer
+	FROM Track
+	)</sql><sql name="SQL 18">
+SELECT
+TrackId
+FROM
+Track
+WHERE
+TrackId NOT IN (SELECT Composer FROM Track)
+</sql><current_tab id="17"/></tab_sql></sqlb_project>

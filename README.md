@@ -6,12 +6,19 @@ This is my practice repo for [SQL Essential Training](https://www.linkedin.com/l
 
 I've used SQL before but it's been a while, and I wanted to get my fundamentals back before I need them again. This course was a good refresher because it starts from the basics and builds up to joins, subqueries, and views, then ends with a small investigation project where you actually have to use all of it.
 
+## Certificate
+
+Finished the course on Nov 4, 2026. Click the image for the PDF.
+
+[![SQL Essential Training certificate](certificate/certificate-preview.png)](certificate/SQL-Essential-Training-Certificate.pdf)
+
 ## What's in Here
 
 - `Ex_Files_SQL_EssT/Exercise Files/WSDA_Music.db` - the SQLite database used in the course
 - `Ex_Files_SQL_EssT/Exercise Files/WSDA_Music.sqbpro` - my DB Browser for SQLite project with the queries I wrote while following along
 - `Ex_Files_SQL_EssT/Exercise Files/*.pdf` - the challenge and solution sheets for the final project
 - `images/` - diagrams I put together for this README
+- `certificate/` - my certificate of completion
 
 ## Tools
 

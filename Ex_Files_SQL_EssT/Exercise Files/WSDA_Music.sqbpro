@@ -105,7 +105,7 @@ GROUP BY
 HAVING
  avg(total) &gt; 5.00
 ORDER BY
- BillingCity ASC</sql><sql name="SQL 9">-- Description: Grouping in SQL | What are the average invoice totals greater than $5.00 for cities starting with B?
+ BillingCity ASC</sql><sql name="SQL 9*">-- Description: Grouping in SQL | What are the average invoice totals greater than $5.00 for cities starting with B?
 
 SELECT
  BillingCity,
@@ -130,4 +130,69 @@ FROM
 GROUP BY
  BillingCity, BillingCountry
 ORDER BY
- BillingCountry</sql><current_tab id="9"/></tab_sql></sqlb_project>
+ BillingCountry</sql><sql name="SQL 11*">-- Description: Subqueries | Gather data about all invoices that are less than this average?
+
+SELECT
+ InvoiceDate,
+ BillingAddress,
+ BillingCity,
+ total
+FROM
+ Invoice
+WHERE
+ total &lt;
+ (SELECT avg(total) FROM Invoice)
+ORDER BY
+ total DESC</sql><sql name="SQL 12*">-- Description: Subqueries
+
+
+SELECT
+ BillingCity,
+ AVG(total) AS [City Average],
+ (SELECT AVG(total) FROM Invoice) AS [Global Average]
+FROM
+ Invoice
+GROUP BY
+ BillingCity
+ORDER BY
+ BillingCity</sql><sql name="SQL 13*">-- Description: Subqueries without Agregate functions
+
+
+SELECT
+ InvoiceDate,
+ BillingAddress,
+ BillingCity
+FROM
+ Invoice
+WHERE
+ InvoiceDate &gt;
+(SELECT
+ InvoiceDate
+FROM
+ Invoice
+WHERE
+ InvoiceId = 251)</sql><sql name="SQL 14*">-- Description: Returning multiple values from a subquery
+
+
+
+SELECT
+	InvoiceDate,
+	BillingAddress,
+	BillingCity
+FROM
+	Invoice
+WHERE
+	InvoiceDate IN 
+(SELECT
+ InvoiceDate
+FROM
+ Invoice
+WHERE
+ InvoiceId IN (251, 252, 254))</sql><sql name="SQL 15*">-- Description: Subqueries and DISTINCT | Which tracks are not selling?
+
+SELECT
+	TrackId
+FROM
+	InvoiceLine
+ORDER BY
+	TrackId</sql><current_tab id="14"/></tab_sql></sqlb_project>

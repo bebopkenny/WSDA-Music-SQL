@@ -8,9 +8,7 @@ I've used SQL before but it's been a while, and I wanted to get my fundamentals 
 
 ## Certificate
 
-Finished the course on Nov 4, 2026. Click the image for the PDF.
-
-[![SQL Essential Training certificate](certificate/certificate-preview.png)](certificate/SQL-Essential-Training-Certificate.pdf)
+Finished the course on Nov 4, 2026. You can view my certificate of completion [here](certificate/SQL-Essential-Training-Certificate.pdf).
 
 ## What's in Here
 

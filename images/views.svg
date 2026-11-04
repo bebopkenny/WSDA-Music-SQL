@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="919" height="499" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="460.0" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Views</text>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+</defs>
+<rect x="30" y="70" width="400" height="250" rx="12" fill="#f9fafb" stroke="#15803d" stroke-width="1.5" />
+<text x="50" y="96" font-size="12" fill="#15803d" text-anchor="start" font-weight="700">CREATE VIEW (saved once)</text>
+<text x="50" y="126" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">CREATE VIEW V_Tracks_InvoiceLine AS</text>
+<text x="50" y="148" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">SELECT</text>
+<text x="50" y="170" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  il.InvoiceId, il.UnitPrice,</text>
+<text x="50" y="192" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  il.Quantity, t.Name,</text>
+<text x="50" y="214" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  t.Composer, t.Milliseconds</text>
+<text x="50" y="236" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">FROM InvoiceLine AS il</text>
+<text x="50" y="258" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">INNER JOIN Track AS t</text>
+<text x="50" y="280" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  ON il.TrackId = t.TrackId</text>
+<path d="M440,195 L520,195" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="530" y="120" width="360" height="160" rx="10" fill="#ffffff" stroke="#15803d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M530 130 a10 10 0 0 1 10 -10 h340 a10 10 0 0 1 10 10 v22 h-360 z" fill="#15803d"/>
+<text x="710.0" y="142" font-size="14" fill="#fff" text-anchor="middle" font-weight="700" font-family="Consolas, Menlo, Monaco, monospace">V_Tracks_InvoiceLine</text>
+<text x="546" y="176" font-size="12" fill="#6b7280" text-anchor="start" font-weight="700">InvoiceId</text>
+<text x="636" y="176" font-size="12" fill="#6b7280" text-anchor="start" font-weight="700">UnitPrice</text>
+<text x="726" y="176" font-size="12" fill="#6b7280" text-anchor="start" font-weight="700">Name</text>
+<text x="816" y="176" font-size="12" fill="#6b7280" text-anchor="start" font-weight="700">...</text>
+<rect x="542" y="188" width="336" height="14" rx="3" fill="#dcfce7"/>
+<rect x="542" y="210" width="336" height="14" rx="3" fill="#dcfce7"/>
+<rect x="542" y="232" width="336" height="14" rx="3" fill="#dcfce7"/>
+<rect x="542" y="254" width="336" height="14" rx="3" fill="#dcfce7"/>
+<text x="710.0" y="310" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">behaves like a table, but stores no data</text>
+<text x="710.0" y="328" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">it re-runs the saved query every time</text>
+<rect x="30" y="360" width="270" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+<text x="46" y="384" font-size="13" fill="#2563eb" text-anchor="start" font-weight="700">Use it</text>
+<text x="46" y="410" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">SELECT *</text>
+<text x="46" y="429" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">FROM V_Tracks_InvoiceLine</text>
+<rect x="320" y="360" width="270" height="90" rx="10" fill="#ffedd5" stroke="#c2410c" stroke-width="1.5" />
+<text x="336" y="384" font-size="13" fill="#c2410c" text-anchor="start" font-weight="700">Modify it</text>
+<text x="336" y="410" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">DROP VIEW IF EXISTS V_AvgTotal;</text>
+<text x="336" y="429" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">CREATE VIEW V_AvgTotal AS ...</text>
+<rect x="610" y="360" width="270" height="90" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5" />
+<text x="626" y="384" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="700">Delete it</text>
+<text x="626" y="410" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">DROP VIEW</text>
+<text x="626" y="429" font-size="12" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  V_AvgTotal</text>
+<text x="460" y="478" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="400">SQLite has no ALTER VIEW, so modifying a view means dropping it and creating it again.</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="410" viewBox="0 0 940 410" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="939" height="409" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="470.0" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Bucketing invoices with CASE</text>
+<rect x="60.0" y="110" width="65.6" height="60" fill="#f9fafb" stroke="#6b7280" stroke-width="1.5"/>
+<rect x="125.6" y="110" width="164.00000000000003" height="60" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="207.60000000000002" y="136" font-size="13.5" fill="#2563eb" text-anchor="middle" font-weight="700">Low Purchase</text>
+<text x="207.60000000000002" y="156" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">2.00 to 6.99</text>
+<rect x="289.6" y="110" width="262.4" height="60" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+<text x="420.8" y="136" font-size="13.5" fill="#15803d" text-anchor="middle" font-weight="700">Target Purchase</text>
+<text x="420.8" y="156" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">7.00 to 15.00</text>
+<rect x="552.0" y="110" width="328.0" height="60" fill="#ffedd5" stroke="#c2410c" stroke-width="1.5"/>
+<text x="716.0" y="136" font-size="13.5" fill="#c2410c" text-anchor="middle" font-weight="700">Top Performer</text>
+<text x="716.0" y="156" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">ELSE (everything above)</text>
+<text x="92.8" y="98" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="700">Baseline</text>
+<text x="92.8" y="222" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">&lt; 2.00</text>
+<line x1="60" y1="170" x2="880" y2="170" stroke="#1f2937" stroke-width="1.5"/>
+<line x1="60.0" y1="170" x2="60.0" y2="177" stroke="#1f2937"/>
+<text x="60.0" y="194" font-size="12" fill="#1f2937" text-anchor="middle" font-weight="400">$0</text>
+<line x1="125.6" y1="170" x2="125.6" y2="177" stroke="#1f2937"/>
+<text x="125.6" y="194" font-size="12" fill="#1f2937" text-anchor="middle" font-weight="400">$2</text>
+<line x1="289.6" y1="170" x2="289.6" y2="177" stroke="#1f2937"/>
+<text x="289.6" y="194" font-size="12" fill="#1f2937" text-anchor="middle" font-weight="400">$7</text>
+<line x1="552.0" y1="170" x2="552.0" y2="177" stroke="#1f2937"/>
+<text x="552.0" y="194" font-size="12" fill="#1f2937" text-anchor="middle" font-weight="400">$15</text>
+<line x1="880.0" y1="170" x2="880.0" y2="177" stroke="#1f2937"/>
+<text x="880.0" y="194" font-size="12" fill="#1f2937" text-anchor="middle" font-weight="400">$25</text>
+<text x="470.0" y="222" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="400">Invoice total</text>
+<text x="60" y="270" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">CASE</text>
+<text x="60" y="291" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  WHEN total &lt; 2.00 THEN &#x27;Baseline Purchase&#x27;</text>
+<text x="60" y="312" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  WHEN total BETWEEN 2.00 AND 6.99 THEN &#x27;Low Purchase&#x27;</text>
+<text x="60" y="333" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  WHEN total BETWEEN 7.00 AND 15.00 THEN &#x27;Target Purchase&#x27;</text>
+<text x="60" y="354" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  ELSE &#x27;Top Performer&#x27;</text>
+<text x="60" y="375" font-size="13.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">END AS PurchaseType</text>
+<text x="600" y="300" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">CASE checks each WHEN from the top</text>
+<text x="600" y="320" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">and stops at the first one that&#x27;s true.</text>
+<text x="600" y="350" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">The result is a brand new column you</text>
+<text x="600" y="370" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">can filter and sort on like any other.</text>
+</svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="620" viewBox="0 0 1060 620" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1059" height="619" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="530.0" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">The WSDA Music database</text>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+</defs>
+<rect x="20" y="90" width="170" height="200" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+<path d="M20 98 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#2563eb"/>
+<text x="105.0" y="110" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Employee</text>
+<text x="30" y="139" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">EmployeeId</text>
+<rect x="154" y="127" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="167" y="139" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">PK</text>
+<text x="30" y="159" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">FirstName</text>
+<text x="30" y="179" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">LastName</text>
+<text x="30" y="199" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Title</text>
+<text x="30" y="219" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">ReportsTo</text>
+<rect x="154" y="207" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="167" y="219" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">FK</text>
+<text x="30" y="239" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">BirthDate</text>
+<text x="30" y="259" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">HireDate</text>
+<text x="30" y="279" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">+ 8 more</text>
+<rect x="230" y="90" width="170" height="220" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+<path d="M230 98 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#2563eb"/>
+<text x="315.0" y="110" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Customer</text>
+<text x="240" y="139" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">CustomerId</text>
+<rect x="364" y="127" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="377" y="139" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">PK</text>
+<text x="240" y="159" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">FirstName</text>
+<text x="240" y="179" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">LastName</text>
+<text x="240" y="199" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Company</text>
+<text x="240" y="219" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">City</text>
+<text x="240" y="239" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Country</text>
+<text x="240" y="259" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Email</text>
+<text x="240" y="279" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">SupportRepId</text>
+<rect x="364" y="267" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="377" y="279" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">FK</text>
+<text x="240" y="299" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">+ 5 more</text>
+<rect x="440" y="90" width="170" height="200" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+<path d="M440 98 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#2563eb"/>
+<text x="525.0" y="110" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Invoice</text>
+<text x="450" y="139" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">InvoiceId</text>
+<rect x="574" y="127" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="587" y="139" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">PK</text>
+<text x="450" y="159" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">CustomerId</text>
+<rect x="574" y="147" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="587" y="159" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">FK</text>
+<text x="450" y="179" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">InvoiceDate</text>
+<text x="450" y="199" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">BillingAddress</text>
+<text x="450" y="219" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">BillingCity</text>
+<text x="450" y="239" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">BillingCountry</text>
+<text x="450" y="259" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Total</text>
+<text x="450" y="279" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">+ 2 more</text>
+<rect x="650" y="90" width="170" height="140" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+<path d="M650 98 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#2563eb"/>
+<text x="735.0" y="110" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">InvoiceLine</text>
+<text x="660" y="139" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">InvoiceLineId</text>
+<rect x="784" y="127" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="797" y="139" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">PK</text>
+<text x="660" y="159" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">InvoiceId</text>
+<rect x="784" y="147" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="797" y="159" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">FK</text>
+<text x="660" y="179" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">TrackId</text>
+<rect x="784" y="167" width="26" height="16" rx="4" fill="#dbeafe"/>
+<text x="797" y="179" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="700">FK</text>
+<text x="660" y="199" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">UnitPrice</text>
+<text x="660" y="219" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Quantity</text>
+<rect x="20" y="380" width="170" height="80" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M20 388 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="105.0" y="400" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Playlist</text>
+<text x="30" y="429" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">PlaylistId</text>
+<rect x="154" y="417" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="167" y="429" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="30" y="449" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Name</text>
+<rect x="230" y="380" width="170" height="80" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M230 388 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="315.0" y="400" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">PlaylistTrack</text>
+<text x="240" y="429" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">PlaylistId</text>
+<rect x="364" y="417" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="377" y="429" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<text x="240" y="449" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">TrackId</text>
+<rect x="364" y="437" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="377" y="449" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<rect x="440" y="380" width="170" height="220" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M440 388 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="525.0" y="400" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Track</text>
+<text x="450" y="429" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">TrackId</text>
+<rect x="574" y="417" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="587" y="429" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="450" y="449" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Name</text>
+<text x="450" y="469" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">AlbumId</text>
+<rect x="574" y="457" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="587" y="469" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<text x="450" y="489" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">MediaTypeId</text>
+<rect x="574" y="477" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="587" y="489" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<text x="450" y="509" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">GenreId</text>
+<rect x="574" y="497" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="587" y="509" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<text x="450" y="529" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Composer</text>
+<text x="450" y="549" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Milliseconds</text>
+<text x="450" y="569" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Bytes</text>
+<text x="450" y="589" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">UnitPrice</text>
+<rect x="650" y="380" width="170" height="100" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M650 388 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="735.0" y="400" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Album</text>
+<text x="660" y="429" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">AlbumId</text>
+<rect x="784" y="417" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="797" y="429" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="660" y="449" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Title</text>
+<text x="660" y="469" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">ArtistId</text>
+<rect x="784" y="457" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="797" y="469" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">FK</text>
+<rect x="860" y="380" width="170" height="80" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M860 388 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="945.0" y="400" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Artist</text>
+<text x="870" y="429" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">ArtistId</text>
+<rect x="994" y="417" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="1007" y="429" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="870" y="449" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Name</text>
+<rect x="650" y="510" width="170" height="80" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M650 518 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="735.0" y="530" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">Genre</text>
+<text x="660" y="559" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">GenreId</text>
+<rect x="784" y="547" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="797" y="559" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="660" y="579" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Name</text>
+<rect x="860" y="510" width="170" height="80" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="1.5" />
+<path d="M860 518 a8 8 0 0 1 8 -8 h154 a8 8 0 0 1 8 8 v22 h-170 z" fill="#15803d"/>
+<text x="945.0" y="530" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">MediaType</text>
+<text x="870" y="559" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="600">MediaTypeId</text>
+<rect x="994" y="547" width="26" height="16" rx="4" fill="#dcfce7"/>
+<text x="1007" y="559" font-size="10" fill="#15803d" text-anchor="middle" font-weight="700">PK</text>
+<text x="870" y="579" font-size="12.5" fill="#1f2937" text-anchor="start" font-weight="400">Name</text>
+<path d="M230,275 L210,275 L210,135 L190,135" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M20,215 L8,215 L8,135 L20,135" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M440,155 L420,155 L420,135 L400,135" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M650,155 L630,155 L630,135 L610,135" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M820,175 L845,175 L845,355 L525,355 L525,380" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M230,425 L190,425" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M400,445 L420,445 L420,425 L440,425" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M610,465 L638,465 L638,425 L650,425" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M820,465 L840,465 L840,425 L860,425" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M610,505 L630,505 L630,555 L650,555" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<path d="M610,485 L622,485 L622,495 L1040,495 L1040,555 L1030,555" fill="none" stroke="#9ca3af" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="20" y="76" font-size="12" fill="#2563eb" text-anchor="start" font-weight="700">SALES</text>
+<text x="20" y="366" font-size="12" fill="#15803d" text-anchor="start" font-weight="700">MUSIC CATALOG</text>
+<text x="1030" y="76" font-size="12" fill="#6b7280" text-anchor="end" font-weight="400">arrows go from a foreign key (FK) to the primary key (PK) it points at</text>
+</svg>

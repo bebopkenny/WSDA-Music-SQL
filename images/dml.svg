@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="372" viewBox="0 0 920 372" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="919" height="371" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="460.0" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Changing data with DML</text>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+</defs>
+<text x="165" y="82" font-size="18" fill="#15803d" text-anchor="middle" font-weight="800" font-family="Consolas, Menlo, Monaco, monospace">INSERT</text>
+<rect x="30" y="96" width="270" height="86" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5" />
+<text x="44" y="122" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">INSERT INTO Artist (Name)</text>
+<text x="44" y="142" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">VALUES (&#x27;Bob Marley&#x27;)</text>
+<rect x="30" y="205" width="270" height="28" rx="6" fill="#1f2937"/>
+<text x="44" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">ArtistId</text>
+<text x="130" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">Name</text>
+<rect x="30" y="235" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="44" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">274</text>
+<text x="130" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Yorgo</text>
+<rect x="30" y="261" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="44" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">275</text>
+<text x="130" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Chantalle Bridal</text>
+<rect x="30" y="287" width="270" height="24" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+<text x="44" y="304" font-size="12" fill="#1f2937" text-anchor="start" font-weight="700" font-family="Consolas, Menlo, Monaco, monospace">276</text>
+<text x="130" y="304" font-size="12" fill="#15803d" text-anchor="start" font-weight="700">Bob Marley</text>
+<path d="M304,265 L326,265" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+<text x="465" y="82" font-size="18" fill="#c2410c" text-anchor="middle" font-weight="800" font-family="Consolas, Menlo, Monaco, monospace">UPDATE</text>
+<rect x="330" y="96" width="270" height="86" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5" />
+<text x="344" y="122" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">UPDATE Artist</text>
+<text x="344" y="142" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">SET Name = &#x27;Damian Marley&#x27;</text>
+<text x="344" y="162" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">WHERE ArtistId = 276</text>
+<rect x="330" y="205" width="270" height="28" rx="6" fill="#1f2937"/>
+<text x="344" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">ArtistId</text>
+<text x="430" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">Name</text>
+<rect x="330" y="235" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="344" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">274</text>
+<text x="430" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Yorgo</text>
+<rect x="330" y="261" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="344" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">275</text>
+<text x="430" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Chantalle Bridal</text>
+<rect x="330" y="287" width="270" height="24" fill="#ffedd5" stroke="#c2410c" stroke-width="1.5"/>
+<text x="344" y="304" font-size="12" fill="#1f2937" text-anchor="start" font-weight="700" font-family="Consolas, Menlo, Monaco, monospace">276</text>
+<text x="430" y="304" font-size="12" fill="#c2410c" text-anchor="start" font-weight="700">Damian Marley</text>
+<path d="M604,265 L626,265" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+<text x="765" y="82" font-size="18" fill="#b91c1c" text-anchor="middle" font-weight="800" font-family="Consolas, Menlo, Monaco, monospace">DELETE</text>
+<rect x="630" y="96" width="270" height="86" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5" />
+<text x="644" y="122" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">DELETE FROM Artist</text>
+<text x="644" y="142" font-size="12.5" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">WHERE ArtistId = 276</text>
+<rect x="630" y="205" width="270" height="28" rx="6" fill="#1f2937"/>
+<text x="644" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">ArtistId</text>
+<text x="730" y="224" font-size="12" fill="#fff" text-anchor="start" font-weight="700">Name</text>
+<rect x="630" y="235" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="644" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">274</text>
+<text x="730" y="252" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Yorgo</text>
+<rect x="630" y="261" width="270" height="24" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="644" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400" font-family="Consolas, Menlo, Monaco, monospace">275</text>
+<text x="730" y="278" font-size="12" fill="#1f2937" text-anchor="start" font-weight="400">Chantalle Bridal</text>
+<rect x="630" y="287" width="270" height="24" fill="#ffffff" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="765" y="304" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="700">row 276 is gone</text>
+<text x="460" y="345" font-size="13" fill="#b91c1c" text-anchor="middle" font-weight="600">Always check the WHERE on UPDATE and DELETE. Leave it off and it hits every row in the table.</text>
+</svg>

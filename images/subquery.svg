@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="460" viewBox="0 0 950 460" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="949" height="459" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="475.0" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">How a subquery works</text>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+</defs>
+<rect x="40" y="70" width="520" height="250" rx="12" fill="#f9fafb" stroke="#2563eb" stroke-width="1.5" />
+<text x="60" y="96" font-size="12" fill="#2563eb" text-anchor="start" font-weight="700">OUTER QUERY</text>
+<text x="60" y="128" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">SELECT</text>
+<text x="60" y="150" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  InvoiceDate, BillingAddress,</text>
+<text x="60" y="172" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">  BillingCity, total</text>
+<text x="60" y="194" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">FROM Invoice</text>
+<text x="60" y="216" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">WHERE total &lt;</text>
+<rect x="80" y="240" width="420" height="60" rx="10" fill="#ffedd5" stroke="#c2410c" stroke-width="1.5" />
+<text x="96" y="258" font-size="11" fill="#c2410c" text-anchor="start" font-weight="700">INNER QUERY (runs first)</text>
+<text x="96" y="285" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">(SELECT avg(total) FROM Invoice)</text>
+<path d="M500,270 C560,270 580,200 640,200" fill="none" stroke="#c2410c" stroke-width="2.2" marker-end="url(#arr)"/>
+<rect x="650" y="160" width="260" height="80" rx="12" fill="#ffedd5" stroke="#c2410c" stroke-width="1.5" />
+<text x="780" y="190" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">returns one value</text>
+<text x="780" y="222" font-size="26" fill="#1f2937" text-anchor="middle" font-weight="700" font-family="Consolas, Menlo, Monaco, monospace">8.06</text>
+<path d="M780,240 C780,300 700,350 560,360" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+<rect x="40" y="345" width="520" height="52" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+<text x="60" y="377" font-size="14" fill="#1f2937" font-family="Consolas, Menlo, Monaco, monospace" xml:space="preserve">...WHERE total &lt; 8.06</text>
+<text x="600" y="377" font-size="14" fill="#1f2937" text-anchor="start" font-weight="600">292 of 413 invoices come back</text>
+<text x="475" y="432" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="400">Also covered: a subquery in the SELECT list (city avg next to the global avg), and IN / NOT IN with a list.</text>
+</svg>

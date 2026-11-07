@@ -2,7 +2,7 @@
 
 My notes and queries from [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-20685933) on LinkedIn Learning. The course uses SQLite and a sample music store database called WSDA Music.
 
-Finished Nov 4, 2026. [Certificate](certificate/SQL-Essential-Training-Certificate.pdf)
+Finished Nov 4, 2026.
 
 ![WSDA Music schema](images/wsda-schema.svg)
 
@@ -23,7 +23,6 @@ The course ends with a project called "Missing Money Matters" where you use SQL 
 
 - `WSDA_Music.sqbpro` - my queries (DB Browser for SQLite project)
 - `Ex_Files_SQL_EssT/Exercise Files/` - the database and project PDFs
-- `certificate/` - certificate of completion
 
 ## Running it
 
